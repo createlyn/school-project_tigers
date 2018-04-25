@@ -1,0 +1,578 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+    display:block;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    color: azure;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Maitree', serif; 
+    font-weight: 700;
+    /* or font-family: 'Playfair Display', serif;
+    font-weight: 900;*/
+    display: block;   
+    
+}
+
+h1 {
+    font-size: 7vh;
+}
+
+h2 {
+    font-size: 6vh;
+}
+
+h3 {
+    font-size: 5.5vh;
+}
+
+h4 {
+    font-size: 5vh;
+}
+
+h5 {
+    font-size: 4.5vh;
+}
+
+h6 {
+    font-size: 3.5vh;
+}
+
+p, li {
+    font-family: 'Maitree', serif; 
+    font-weight: 400;
+    font-size: 2vh;
+    /* or font-family: 'Playfair Display', serif;
+    font-weight: 400;*/
+    
+}
+
+#famous, #tales  {
+    padding-top: 15vh; 
+    margin-top: 2vh;
+   
+
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 11vh;
+    text-align: center;
+    position: fixed;
+    transition: top 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* nav */
+
+nav {
+    text-decoration: none;
+    font-size: 3vh;
+    font-family: 'Work Sans', sans-serif;
+    /* or font-family: 'Catamaran', sans-serif; */
+    font-weight: 400;
+    color: blue;
+    z-index: 999;
+}
+
+
+nav a {
+    text-decoration: none;
+    font-size: 3vh;
+    margin: 2vw;
+    font-family: 'Work Sans', sans-serif;
+    /* or font-family: 'Catamaran', sans-serif; */
+    font-weight: 400;
+    color: white;
+    z-index: 999;
+}
+
+#special {
+    font-size: 7vh;
+    margin-top: 2vh;
+    font-family: 'Erica One', cursive;
+}
+
+
+nav a.active {
+    border-bottom: 3px white solid;
+    
+}
+
+nav .special.active {
+    border-bottom: none;
+}
+
+
+/* this is header animation*/
+
+
+/* ---------------- For sticky header: class="float-panel"  ------------------*/
+.float-panel {
+    color: white;
+    transform: translateZ(0);
+    transition:all 0.3s; 
+    top: 0;/* Effect for switching from .fixed to static */
+    text-shadow: 1px 1px 7px black;
+}
+/*.float-panel .content-area {
+    margin:10px auto;
+}
+
+.float-panel a {
+    font-size:16px;
+    text-decoration:none;
+    color:#444;
+    display:inline-block;
+    padding:10px 20px;
+}*/
+
+.float-panel .fa-gg {
+    color:#F0595C;
+    font-size:30px;
+    vertical-align:middle;
+    transition:all 1s;}
+
+
+/* when class="float-panel fixed" */
+.fixed {
+    background-color: rgba(0, 0, 0, 0.6);
+    /*box-shadow:0 2px 6px rgba(0,0,0,0.2);*/
+    padding:4px 0;
+    animation:slide-down 0.7s;
+    opacity:0.9;
+    z-index: 500;
+    top: 0;
+    text-shadow: none;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+        
+    } 
+}
+
+
+
+/* ---------------- For Animation on Scroll ---------------- */
+.slideanim {
+    visibility:hidden;
+}
+.slideanim.slide {visibility: visible; animation:slide 1s;}
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+
+
+
+ 
+/* end header */
+
+
+
+/* index */
+
+#index {
+    background-image: url("../images/tiger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right; 
+    width: 100vw;
+    height: 100vh;
+   
+    
+    /*margin-top: 14vh;*/
+
+   
+    
+}
+
+/* end index */
+
+
+
+
+/* about */
+
+
+#about {
+    width: 100vw;
+    height: 110vh;
+    background-color: darkorange;
+   /* background-image: url("../images/about-tiger.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left bottom; */ 
+    /*padding-top: 15vh;*/
+
+}
+
+#info {
+    width: 31vw;
+    background-color: black;
+    margin-left: 2vw;
+    float: right;
+    padding: 2vh 2vw 3.5vh 2vw;
+    margin-top: 5vh;
+}
+
+#about section {
+    padding-top: 10vh;
+    height: 100%;
+}
+
+#info h3 {
+    padding: 8vh 0vh 1vh 0vh;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+section h1 {
+    padding: 8vh 0vh 1vh 0vh;
+    text-align: center;
+}
+
+#info p {
+    line-height: 2.25vh;
+    margin-bottom: 1vw;
+    text-indent: 1vw;
+    text-align: justify;
+}
+
+#info p a {
+    color: darkorange;
+}
+
+p.center {
+    text-align: center;
+}
+
+
+#about ul {
+    float: left;
+    width: 56vw;
+    margin: 0vh 0vw 1vh 3vw;
+    background-color: black;
+    padding: 0vw 2vw;
+}
+
+#about ul {
+    
+}
+
+#about li {
+    list-style-type: none;
+    font-size: 2.25vw;
+    margin: 2.5vh 0vw;
+    font-family: 'Maitree', serif; 
+    font-weight: 400;
+    line-height: 3.9vh;
+    border: 2px darkorange solid;
+    padding: 1vw;
+}
+
+/* end about */
+
+
+
+
+
+/* famous */
+    
+#famous {
+    width: 100vw;
+    height: 145vh;
+    background-color: black;
+    clear: both;
+    padding-top: 15vh;
+    margin-top: 2vh;
+}
+
+.imgcontainer {
+    width: 50vw;
+    height: 50vh;
+}
+
+
+.caption-style-4{
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		
+	}
+
+	.caption-style-4 li{
+		float: left;
+		padding: 0px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.caption-style-4 li:hover .caption{
+		opacity: 1;
+	}
+
+	.caption-style-4 li:hover img{
+		opacity: 1;
+		transform: scale(1.15,1.15);
+		-webkit-transform:scale(1.15,1.15);
+		-moz-transform:scale(1.15,1.15);
+		-ms-transform:scale(1.15,1.15);
+		-o-transform:scale(1.15,1.15);
+	}
+
+
+	.caption-style-4 img{
+		margin: 0px;
+		padding: 0px;
+		float: left;
+		z-index: 4;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+	}
+
+
+	.caption-style-4 .caption{
+		cursor: pointer;
+		position: absolute;
+		opacity: 0;
+		-webkit-transition:all 0.45s ease-in-out;
+		-moz-transition:all 0.45s ease-in-out;
+		-o-transition:all 0.45s ease-in-out;
+		-ms-transition:all 0.45s ease-in-out;
+		transition:all 0.45s ease-in-out;
+	}
+
+	.caption-style-4 img{
+		-webkit-transition:all 0.25s ease-in-out;
+		-moz-transition:all 0.25s ease-in-out;
+		-o-transition:all 0.25s ease-in-out;
+		-ms-transition:all 0.25s ease-in-out;
+		transition:all 0.25s ease-in-out;
+	}
+	.caption-style-4 .blur{
+		background-color: rgba(0,0,0,0.65);
+        width: 50vw;
+        height: 50vh;
+		z-index: 5;
+		position: absolute;
+	}
+
+	.caption-style-4 .caption-text h2{
+		text-transform: uppercase;
+        text-align: center;
+		
+	}
+	.caption-style-4 .caption-text{
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		width: 50vw;
+		height: 35vh;
+		text-align: center;
+		top:100px;
+	}
+
+
+
+
+/*end gallery*/
+
+
+
+/* round 2 */
+
+.left, .right {
+    width: 50vw;
+    background-color: aqua;
+    float: left;
+    
+}
+
+
+
+/*end round 2*/
+/* end famous */
+
+
+/* tales */
+
+#tales {
+    width: 100vw;
+    height: 90vh;
+    background-color: seagreen;
+    clear: both;
+    padding-top: 15vh;
+    margin-top: 2vh;
+    color: white;
+    margin-bottom: -2vh;
+    
+    
+}
+
+#tales h1 {
+    text-align: center;
+    
+}
+
+
+#tales p {
+    margin: auto;
+    width: 70%;
+    padding: 2vh;
+    text-indent: 5vw;
+}
+
+.center a {
+    color: white;
+    font-weight: 600;
+    
+}
+
+
+
+/* end tales */
+
+
+/* help */
+
+#help {
+    background-image: url("../images/bottom-tiger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+     background-position: right;
+    width: 100vw;
+    height: 100vh;
+    background-color: greenyellow;
+    clear: both;
+    margin-top: 2vh;
+    
+}
+
+#help section {
+    height: 100vh;
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-left: 3vw;
+    color: dimgrey;
+    text-align: center;
+  
+}
+
+#help h3 {
+    padding-top: 15vh;
+    text-align: center;
+}
+
+#help h6 {
+    text-align: left;
+    margin-left: 1vw;
+    text-transform: uppercase;
+    
+}
+
+#help h5 {
+    margin-top: -3vh;
+    margin-bottom: 2vh;
+}
+
+#help li {
+    padding: .75vw;
+    list-style-type: none;
+}
+
+
+
+#help a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Maitree', serif; 
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#help a:hover {
+    color: darkorange;
+}
+
+.butty {
+    width: 80%;
+    height: 5vh;
+    background-color: black;
+    padding-top: 1vh;
+    margin: 2vh auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
+}
+
+
+
+/* end help */
+
+
+
+/*footer*/
+
+footer {
+    text-align: center;
+    font-family: 'Maitree', serif; 
+    font-weight: 400;
+    clear: both;
+    bottom: 0;
+   margin-top: -4vh;
+    width: 35vw;
+    margin-left: 3vw;
+    color: dimgray;
+    
+}
+
+
+
+/* media query */
+@media (max-width: 800px) {
+    
+}
+
+
